@@ -13,35 +13,18 @@
 
 int main() {
 
-    //unit_tests();
+    unit_tests();
+
     Stack stk = {};
 
-    StackConstruct (&stk, 5) asserted;
+    StackConstruct (&stk, 1);
 
-    FILE *output = NULL;
-    output = fopen ("logs.txt", "w");
-    StackDump (&stk, output);
-
-    StackPush (&stk, 2);
-    StackPush (&stk, 32345);
-    StackPush (&stk, 5);
-    StackPush (&stk, 1);
-    StackPush (&stk, 2);
-    StackPush (&stk, 2);
-    StackPush (&stk, 2);
-
-    StackPop  (&stk);
-
-    printf("%f", ( (Element*)(stk.buffer) ) [0]);
-
-    StackPop  (&stk);
-
-    StackDump (&stk, output);
+    StackPop (&stk);
 
 
-    StackDestruct (&stk);
 
-    fclose(output);
+    //StackDestruct (&stk);
+
     return 0;
 
 }
